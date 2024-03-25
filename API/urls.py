@@ -3,6 +3,7 @@ from UserAccounts.views import RegisterView, LoginView, EditProfile
 from VehicleInfo.views import VehiclesAddView
 from ChargingStations.views import StationsAddView
 from PaymentIntegration.views import RazorpayOrderAPIView, TransactionAPIView
+from ServiceCenters.views import CenterAddView, DeliveryAddView, DeliveryView, ServiceDetail, ServiceList
 
 urlpatterns = [
     path('register/', RegisterView.as_view()),
@@ -12,7 +13,10 @@ urlpatterns = [
     path('addStations/', StationsAddView.as_view()),
     path('createOrder/', RazorpayOrderAPIView.as_view()),
     path('completeOrder/', TransactionAPIView.as_view()),
-
-
+    path('addServiceCenter/', CenterAddView.as_view()),
+    path('addDeliveryBoy/', DeliveryAddView.as_view()),
+    path('showDeliveryBoy/<int:pk>/', DeliveryView.as_view()),
+    path('listServices/', ServiceList.as_view()),
+    path('showService/<int:pk>/', ServiceDetail.as_view()),
 
 ]

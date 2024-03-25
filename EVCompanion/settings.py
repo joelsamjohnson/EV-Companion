@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hu6=d%rh=34)(57(iwk!booojf*0tib=zz-6f!d&28o9u$3oml
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.2.2']
+ALLOWED_HOSTS = ['10.0.2.2', '127.0.0.1']
 # ALLOWED_HOSTS = []
 
 
@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'VehicleInfo',
     'ChargingStations',
-    'PaymentIntegration'
+    'PaymentIntegration', 
+    'ServiceCenters'
 
 ]
 
